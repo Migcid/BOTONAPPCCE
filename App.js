@@ -8,13 +8,20 @@ import { Sermones } from './components/Sermones';
 import { Anuncios } from './components/Anuncios';
 import SplashScreenHandler from './components/OcultarSplash';
 //import { SafeAreaView,  } from 'react-native-web';
-
+import { useFonts } from 'expo-font';
 
 
 
 
 
 export default function App() {
+
+  const [fontsLoaded] = useFonts({
+    Poppins: require("./assets/fonts/Poppins-Light.ttf"),
+    Warp: require("./assets/fonts/TiltWarp-Regular.ttf"),
+    Playfair: require("./assets/fonts/PlayfairDisplay-Regular.ttf"),
+  })
+
   return (
    
 
@@ -24,7 +31,7 @@ export default function App() {
    <Iglesia  />
 <View style={styles.title}>
 
-            <Text>
+            <Text style={{ fontFamily: "Playfair", fontSize: 30,}}>
               BIENVENIDO A IGLESIA CCE
             </Text>
   </View>
@@ -53,6 +60,7 @@ const styles = StyleSheet.create({
    width: '100%',
    height: '100%', //auto
    //fontSize: 85,
+   fontFamily: 'Warp',
     
   },
  
@@ -67,7 +75,7 @@ const styles = StyleSheet.create({
     margin:0,
     justifyContent: 'center', // para centrar solo el texto verticalmente
     alignItems:'center', // para centrar solo el texto horizontalmente
-    
+    fontFamily: "Poppins",
   },
  
   

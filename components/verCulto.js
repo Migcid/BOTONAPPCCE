@@ -10,7 +10,7 @@ export function VerCulto() {
         <View  style={styles.container}>
      
             <Button 
-                icon="eye" mode="elevated" buttonColor='#4B5560' textColor="#ffffff"  onPress={() => WebBrowser.openBrowserAsync('https://www.iglesiacce.org/livestream')}> Transmision En Vivo
+                icon="eye" mode="elevated" buttonColor='#4B5560' textColor="#ffffff"  onPress={() => WebBrowser.openBrowserAsync('https://www.iglesiacce.org/livestream')}> Transmisión En Vivo
             </Button>
         </View>
     </PaperProvider>
