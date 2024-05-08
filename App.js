@@ -6,32 +6,66 @@ import { ButtonDar } from './components/ButtonDar';
 import { VerCulto } from './components/verCulto';
 import { Sermones } from './components/Sermones';
 import { Anuncios } from './components/Anuncios';
+import { Footer } from './components/footer';
+//import { useFonts } from 'expo-font';
 import SplashScreenHandler from './components/OcultarSplash';
-//import { SafeAreaView,  } from 'react-native-web';
-import { useFonts } from 'expo-font';
-
-
+import * as SplashScreen from 'expo-splash-screen';
+import {
+  useFonts,
+  PlayfairDisplay_400Regular,
+  PlayfairDisplay_500Medium,
+  PlayfairDisplay_600SemiBold,
+  PlayfairDisplay_700Bold,
+  PlayfairDisplay_800ExtraBold,
+  PlayfairDisplay_900Black,
+  PlayfairDisplay_400Regular_Italic,
+  PlayfairDisplay_500Medium_Italic,
+  PlayfairDisplay_600SemiBold_Italic,
+  PlayfairDisplay_700Bold_Italic,
+  PlayfairDisplay_800ExtraBold_Italic,
+  PlayfairDisplay_900Black_Italic,
+} from '@expo-google-fonts/playfair-display';
 
 
 
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-    Poppins: require("./assets/fonts/Poppins-Light.ttf"),
+   /* Poppins: require("./assets/fonts/Poppins-Light.ttf"),
     Warp: require("./assets/fonts/TiltWarp-Regular.ttf"),
-    Playfair: require("./assets/fonts/PlayfairDisplay-Regular.ttf"),
-  })
+    Playfair: require("./assets/fonts/PlayfairDisplay-Regular.ttf"),*/
+ // en el ejemplo de la pagina de la fuente, indica lets antes del corchete pero lo cambiamos a const
+    
+      PlayfairDisplay_400Regular,
+      PlayfairDisplay_500Medium,
+      PlayfairDisplay_600SemiBold,
+      PlayfairDisplay_700Bold,
+      PlayfairDisplay_800ExtraBold,
+      PlayfairDisplay_900Black,
+      PlayfairDisplay_400Regular_Italic,
+      PlayfairDisplay_500Medium_Italic,
+      PlayfairDisplay_600SemiBold_Italic,
+      PlayfairDisplay_700Bold_Italic,
+      PlayfairDisplay_800ExtraBold_Italic,
+      PlayfairDisplay_900Black_Italic,
+    });
+  
+    if (!fontsLoaded) {
+      return null;
+    }
+
 
   return (
    
+    
 
-
-<View style={styles.container}>  
+<View style={styles.container} >  
   
+   <SplashScreenHandler />
    <Iglesia  />
 <View style={styles.title}>
 
-            <Text style={{ fontFamily: "Playfair", fontSize: 30,}}>
+            <Text /*style={{ fontFamily: "Playfair", fontSize: 25,}}*/>
               BIENVENIDO A IGLESIA CCE
             </Text>
   </View>
@@ -43,8 +77,10 @@ export default function App() {
              <ButtonDar/>
              <Sermones />
              <Anuncios />
+             <Footer />
+             
   </View>
-
+   
 </View>
 
 
@@ -60,7 +96,7 @@ const styles = StyleSheet.create({
    width: '100%',
    height: '100%', //auto
    //fontSize: 85,
-   fontFamily: 'Warp',
+   fontFamily: 'PlayfairDisplay_400Regular',
     
   },
  
@@ -75,7 +111,8 @@ const styles = StyleSheet.create({
     margin:0,
     justifyContent: 'center', // para centrar solo el texto verticalmente
     alignItems:'center', // para centrar solo el texto horizontalmente
-    fontFamily: "Poppins",
+    verticalAlign: 'center',
+    fontFamily: "PlayfairDisplay_400Regular",
   },
  
   

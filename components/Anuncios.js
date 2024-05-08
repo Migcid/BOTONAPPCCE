@@ -10,7 +10,7 @@ export function Anuncios() {
         <View  style={styles.container}>
      
             <Button 
-                icon="alarm-light-outline" mode="elevated" buttonColor='#4B5560' textColor="#ffffff" onPress={() => WebBrowser.openBrowserAsync('https://www.iglesiacce.org/contacto')}> Anuncios
+                icon="alarm-light-outline" mode="elevated" buttonColor='#4B5560' textColor="#ffffff" onPress={() => WebBrowser.openBrowserAsync('https://www.iglesiacce.org/anuncios')}> Anuncios
             </Button>
         </View>
     </PaperProvider>

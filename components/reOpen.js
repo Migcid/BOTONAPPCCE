@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    
     //maxHeight: '2%',
     //marginTop: '5', //5
     //maxHeight: 50,
