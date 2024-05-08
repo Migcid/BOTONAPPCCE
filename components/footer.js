@@ -7,9 +7,9 @@ import { PaperProvider } from "react-native-paper";
 export function Footer(){
 return(
 <PaperProvider>
-        <View  style={styles.footer}>
+        <View  >
      
-            <Text>
+            <Text style={styles.footer}>
                 Version 1.1 Beta
             </Text>
         </View>
@@ -29,7 +29,8 @@ const styles = StyleSheet.create({
       
       //backgroundColor: '#4B5560',
       //maxHeight: 50,
-  
+      fontFamily: "PlayfairDisplay_400Regular",
+      fontSize: 15,
       
     },
   });

@@ -10,45 +10,24 @@ import { Footer } from './components/footer';
 //import { useFonts } from 'expo-font';
 import SplashScreenHandler from './components/OcultarSplash';
 import * as SplashScreen from 'expo-splash-screen';
-import {
-  useFonts,
-  PlayfairDisplay_400Regular,
-  PlayfairDisplay_500Medium,
-  PlayfairDisplay_600SemiBold,
-  PlayfairDisplay_700Bold,
-  PlayfairDisplay_800ExtraBold,
-  PlayfairDisplay_900Black,
-  PlayfairDisplay_400Regular_Italic,
-  PlayfairDisplay_500Medium_Italic,
-  PlayfairDisplay_600SemiBold_Italic,
-  PlayfairDisplay_700Bold_Italic,
-  PlayfairDisplay_800ExtraBold_Italic,
-  PlayfairDisplay_900Black_Italic,
-} from '@expo-google-fonts/playfair-display';
+import { useFonts, PlayfairDisplay_400Regular, PlayfairDisplay_500Medium, PlayfairDisplay_600SemiBold, PlayfairDisplay_700Bold, Poppins_300Light } from '@expo-google-fonts/playfair-display';
+
 
 
 
 export default function App() {
 
   const [fontsLoaded] = useFonts({
-   /* Poppins: require("./assets/fonts/Poppins-Light.ttf"),
-    Warp: require("./assets/fonts/TiltWarp-Regular.ttf"),
-    Playfair: require("./assets/fonts/PlayfairDisplay-Regular.ttf"),*/
+   
  // en el ejemplo de la pagina de la fuente, indica lets antes del corchete pero lo cambiamos a const
     
       PlayfairDisplay_400Regular,
       PlayfairDisplay_500Medium,
       PlayfairDisplay_600SemiBold,
       PlayfairDisplay_700Bold,
-      PlayfairDisplay_800ExtraBold,
-      PlayfairDisplay_900Black,
-      PlayfairDisplay_400Regular_Italic,
-      PlayfairDisplay_500Medium_Italic,
-      PlayfairDisplay_600SemiBold_Italic,
-      PlayfairDisplay_700Bold_Italic,
-      PlayfairDisplay_800ExtraBold_Italic,
-      PlayfairDisplay_900Black_Italic,
+    
     });
+    
   
     if (!fontsLoaded) {
       return null;
@@ -65,7 +44,7 @@ export default function App() {
    <Iglesia  />
 <View style={styles.title}>
 
-            <Text /*style={{ fontFamily: "Playfair", fontSize: 25,}}*/>
+            <Text style={styles.textTitle}>
               BIENVENIDO A IGLESIA CCE
             </Text>
   </View>
@@ -95,9 +74,7 @@ const styles = StyleSheet.create({
    justifyContent: 'space-between', // space-around
    width: '100%',
    height: '100%', //auto
-   //fontSize: 85,
-   fontFamily: 'PlayfairDisplay_400Regular',
-    
+   
   },
  
   title: {
@@ -112,7 +89,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center', // para centrar solo el texto verticalmente
     alignItems:'center', // para centrar solo el texto horizontalmente
     verticalAlign: 'center',
-    fontFamily: "PlayfairDisplay_400Regular",
+    
   },
  
   
@@ -123,10 +100,13 @@ const styles = StyleSheet.create({
     height: '60%', // la altura es para ocupar el 90% de la pantalla sin incluir el BIENVENIDO. antes estaba en el 90%
     backgroundColor: '#ffffff',
     color:'#ffffff',
-    //padding: 0,
-    //marginBottom:100,
     alignItems:'center',
-    //fontSize: 150,
+    
+  },
+
+  textTitle: {
+    fontFamily: 'PlayfairDisplay_500Medium',
+    fontSize: 25,
   },
  
 });
