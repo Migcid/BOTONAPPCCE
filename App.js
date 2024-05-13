@@ -7,7 +7,6 @@ import { VerCulto } from './components/verCulto';
 import { Sermones } from './components/Sermones';
 import { Anuncios } from './components/Anuncios';
 import { Footer } from './components/footer';
-//import { useFonts } from 'expo-font';
 import SplashScreenHandler from './components/OcultarSplash';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts, PlayfairDisplay_400Regular, PlayfairDisplay_500Medium, PlayfairDisplay_600SemiBold, PlayfairDisplay_700Bold, Poppins_300Light } from '@expo-google-fonts/playfair-display';
@@ -45,7 +44,10 @@ export default function App() {
 <View style={styles.title}>
 
             <Text style={styles.textTitle}>
-              BIENVENIDO A IGLESIA CCE
+              BIENVENIDO
+            </Text>
+            <Text style={styles.textTitle2}>
+              IGLESIA CCE
             </Text>
   </View>
 
@@ -105,7 +107,11 @@ const styles = StyleSheet.create({
   },
 
   textTitle: {
-    fontFamily: 'PlayfairDisplay_500Medium',
+    fontFamily: 'PlayfairDisplay_600SemiBold',
+    fontSize: 25,
+  },
+  textTitle2: {
+    fontFamily: 'PlayfairDisplay_400Regular',
     fontSize: 25,
   },
  

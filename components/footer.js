@@ -10,7 +10,7 @@ return(
         <View  >
      
             <Text style={styles.footer}>
-                Version 1.1 Beta
+                Version 1.2 Beta
             </Text>
         </View>
     </PaperProvider>
